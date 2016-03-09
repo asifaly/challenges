@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>07 Mar Challenges</title>
+  <link rel="stylesheet" href="/css/master.css" media="screen" title="no title" charset="utf-8"> </head>
+
+<body>
+  <div class="container">
+    <header>
+      <h3>CodeAstra Programming Challenges</h3>
+      <nav> <a href="/07Mar/07mar.html">07 March 2016</a> <a href="/08Mar/08mar.html">08 March 2016</a> <a href="/09Mar/09mar.html">09 March 2016</a> </nav>
+    </header>
+    <div class="left">
+      <h5>1. Hello World</h5>
+      <input type="submit" onclick="hello()" value="Say Hello World!" />
+      <h5>2. Say Hello Name</h5>
+      <input type="text" id="paramnamegreet" placeholder="Enter Name" />
+      <input type="submit" onclick="nameGreet(paramnamegreet.value)" value="Say Hello Name!" />
+      <h5>3. Say Hello Alice or Bob</h5>
+      <input type="text" id="paramnamegreet1" placeholder="Enter Name" />
+      <input type="submit" onclick="nameGreet1(paramnamegreet1.value)" value="Say Hello!" />
+      <h5>4. Sum of N numbers</h5>
+      <input type="number" id="paramsumn" placeholder="Upto" />
+      <input type="submit" onclick="sumN(paramsumn.value)" value="Sum" />
+      <h5>5. Sum of N Numbers Only multiples of 3 or 5 (not both)</h5>
+      <input type="number" id="paramsumspecial" placeholder="Upto Number" />
+      <input type="submit" onclick="sumSpecial(paramsumspecial.value)" value="Calculate Sum" />
+      <h5>6. Multiplication Table</h5>
+      <input type="number" id="which" placeholder="Which table" />
+      <input type="number" id="upto" placeholder="Upto which number" />
+      <input type="submit" onclick="multiply(which.value, upto.value)" />
+      <h5>7. Next 100 Leap Years</h5>
+      <input type="number" id="lpyear" placeholder="Enter Beginning Year" required />
+      <input type="submit" onclick="leap(lpyear.value)" value="Generate" /> </div>
+    <div class="right">
+      <h5>Result Window</h5>
+      <div id="result"> </div>
+    </div>
+  </div>
+  <script src="/07Mar/scripts.js" charset="utf-8"></script>
+</body>
+
+</html>

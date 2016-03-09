@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>08 Mar Challenges</title>
+  <link rel="stylesheet" href="/css/master.css" media="screen" title="no title" charset="utf-8"> </head>
+
+<body>
+  <div class="container">
+    <header>
+      <h3>CodeAstra Programming Challenges</h3>
+      <nav> <a href="/07Mar/07mar.html">07 March 2016</a> <a href="/08Mar/08mar.html">08 March 2016</a> <a href="/09Mar/09mar.html">09 March 2016</a> </nav>
+    </header>
+    <div class="left">
+      <h4>Day 2 - 08 Mar 2015</h4>
+      <fieldset>
+        <legend>1. Reverse Words </legend>
+        <input type="text" id="revword" placeholder="Enter text to reverse words" />
+        <input type="submit" value="Reverse Words" onclick="reverseWords(revword.value)" /> </fieldset>
+      <fieldset>
+        <legend>2. Pig Latin </legend>
+        <input type="text" id="piglatin" placeholder="Enter text to change to PigLatin" />
+        <input type="submit" value="Pig Latin" onclick="reverseWords(piglatin.value, true)" /> </fieldset>
+      <fieldset>
+        <legend>3. Print Numbers without String</legend>
+        <input type="number" id="num" placeholder="Enter a Number" />
+        <input type="submit" value="Print Number" onclick="numPrint(num.value)" />
+        <br /> </fieldset>
+      <fieldset>
+        <legend>4. Convert Number to words </legend>
+        <input type="number" id="digits" placeholder="Enter the Number to Convert" />
+        <input type="submit" value="Convert to Words" onclick="printWords(digits.value)" /> </fieldset> <a href="#" onclick="guessGame()">5. Guess the Number</a> </div>
+  </div>
+  <!-- -->
+  <div class="right">
+    <h5>Result Window</h5>
+    <div id="result"> </div>
+  </div>
+  </div>
+  <script src="/08Mar/scripts.js" charset="utf-8"></script>
+</body>
+
+</html>
