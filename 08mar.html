@@ -30,7 +30,13 @@
       <fieldset>
         <legend>4. Convert Number to words </legend>
         <input type="number" id="digits" placeholder="Enter the Number to Convert" />
-        <input type="submit" value="Convert to Words" onclick="printWords(digits.value)" /> </fieldset> <a href="#" onclick="guessGame()">5. Guess the Number</a> </div>
+        <input type="submit" value="Convert to Words" onclick="printWords(digits.value)" /> </fieldset>
+      <fieldset>
+        <legend>5. Guess the number </legend>
+        <input type="submit" value="Start Game" onclick="guessGame()" />
+        <input type="number" id="guessnum" placeholder="Enter your guess" />
+        <input type="submit" value="Check Guess" onclick="checkGuess(guessnum.value)" /> </fieldset>
+    </div>
   </div>
   <!-- -->
   <div class="right">
