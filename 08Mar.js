@@ -1,4 +1,7 @@
 var resultDiv = document.getElementById("result");
+var compGuess = 0;
+var attempts = 10;
+var prevGuess = 0;
 
 //1. Reverse Words in a sentence & 2. Pig Latin
 function reverseWords(n, pig) {
@@ -33,19 +36,20 @@ function numPrint(n) {
 
 //4. Guessing Game
 function guessGame() {
-  var attempts = 10;
-  var compGuess = (Math.floor(Math.random() * 100)) + 1;
-  var prevGuess = 0;
-  var guessMsg = "Guess the number.";
+  compGuess = (Math.floor(Math.random() * 100)) + 1;
+  resultDiv.innerHTML = "You have " + attempts + " attempts. ", "Start Guessing!"
+}
+
+function checkGuess(userGuess) {
+  var guessMsg = "";
 
   while (attempts > 0) {
-    var promptMessage = guessMsg + " You have " + attempts + " attempts left" + compGuess;
-    var userGuess = prompt(promptMessage);
+
     if (prevGuess == userGuess) {
-      guessMsg = "You tried this number last time, try a different one. ";
+      guessMsg = "You tried this number last time, try a different one.";
     } else {
       if (userGuess == compGuess) {
-        alert("You guessed it right, the number was " + compGuess + " indeed!");
+        guessMsg = "You guessed it right, the number was " + compGuess + " indeed!";
         break;
       } else if (userGuess > compGuess) {
         guessMsg = "Your guess was higher, try again.";
@@ -54,9 +58,13 @@ function guessGame() {
       }
       attempts -= 1;
       prevGuess = userGuess;
+      resultDiv.innerHTML = guessMsg + "Remaining Attempts is " + attempts ".";
     }
+    resultDiv.innerHTML = "Game Over! The number was " + compGuess;
+    prevGuess = 0;
+    attempts = 10;
+    compGuess = 0;
   }
-  alert("Game over! Better luck next time!. The number was " + compGuess);
 }
 
 function printWords(numb) {
