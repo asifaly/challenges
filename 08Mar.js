@@ -43,14 +43,13 @@ function guessGame() {
 function checkGuess(userGuess) {
   var guessMsg = "";
 
-  while (attempts > 0) {
+  if (attempts > 1) {
 
     if (prevGuess == userGuess) {
       guessMsg = "You tried this number last time, try a different one.";
     } else {
       if (userGuess == compGuess) {
         guessMsg = "You guessed it right, the number was " + compGuess + " indeed!";
-        break;
       } else if (userGuess > compGuess) {
         guessMsg = "Your guess was higher, try again.";
       } else {
@@ -58,14 +57,20 @@ function checkGuess(userGuess) {
       }
       attempts -= 1;
       prevGuess = userGuess;
-      resultDiv.innerHTML = guessMsg + "Remaining Attempts is " + attempts ".";
     }
+    resultDiv.innerHTML = guessMsg + "Remaining Attempts is " + attempts + ".";
+  } else {
     resultDiv.innerHTML = "Game Over! The number was " + compGuess;
-    prevGuess = 0;
-    attempts = 10;
-    compGuess = 0;
+    reset();
   }
 }
+
+function reset() {
+  prevGuess = 0;
+  attempts = 10;
+  compGuess = 0;
+}
+
 
 function printWords(numb) {
 
